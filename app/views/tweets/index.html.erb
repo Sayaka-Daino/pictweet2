@@ -1,3 +1,4 @@
 <div class="contents row" >
-  <%= render partial: "tweet", collection: @tweets %>
+  <%= render partial: 'tweet', collection: @tweets %>
+  <%= paginate(@tweets) %>
 </div>
