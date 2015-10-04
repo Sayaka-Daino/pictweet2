@@ -1,10 +1,31 @@
   <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+<<<<<<< HEAD
+=======
+    <% if user_signed_in? && current_user.id == tweet.user_id %>
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+         </li>
+        </ul>
+      </div>
+    <% end %>
+>>>>>>> add_delete
     <p>
       <%= br(tweet.text) %>
     </p>
     <span class="name">
+<<<<<<< HEAD
       <a href="">
         <span>投稿者</span><%= tweet.user.nickname %>
       </a>
     </span>
   </div>
+=======
+      <a href="/users/<%= tweet.user_id %>">
+        <span>投稿者</span><%= tweet.user.nickname %>
+      </a>
+    </span>
+  </div>
+>>>>>>> add_delete
